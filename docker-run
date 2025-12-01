@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -p 50000:50000 --rm -it $(docker build -q .)
