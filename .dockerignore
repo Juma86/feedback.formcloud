@@ -1,4 +1,22 @@
+# Dist
+**/__pycache__/
+*.py[cod]
+
+# Venv
+venv/
 .venv/
+
+# Editor
+.DS_Store
+.vscode/
+
+# Git
+.git/
 .gitignore
+
+# Docker
+.dockerignore
+
+# Meta
+LICENSE
 README.md
-*__pycache__*

@@ -6,4 +6,4 @@ WORKDIR /app/
 
 RUN pip install -r requirements.txt
 
-CMD ["python3", "uk.formcloud.feedback.api.py"]
+CMD ["uvicorn", "uk.formcloud.feedback.api:app", "--host", "0.0.0.0", "--port", "50000"]
