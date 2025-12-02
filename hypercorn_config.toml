@@ -1,0 +1,21 @@
+# hypercorn_config.toml
+
+# --- HTTP/3 (QUIC) specific configuration ---
+# Bind to a UDP port for QUIC
+quic_bind = ["0.0.0.0:8000"]
+bind = ["0.0.0.0:8000"]
+
+# Specify certificates
+# certfile = "cert.pem"
+# keyfile = "key.pem"
+
+# Advertise only h3 protocol via ALPN
+# Omit "h2" and "http/1.1" to restrict to HTTP/3
+alpn_protocols = ["h3", "h2", "http/1.1"]
+
+# Hint to clients that HTTP/3 is available
+alt_svc_headers = ["h3=\":8000\"; ma=86400"]
+
+keep_alive_timeout = 1
+workers = 1
+worker_class = "asyncio"

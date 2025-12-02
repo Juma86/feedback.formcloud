@@ -1,2 +1,5 @@
 fastapi[standard]
-uvicorn[standard]
+hypercorn[h3]
+dotenv
+httpx
+aioquic
